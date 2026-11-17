@@ -223,6 +223,20 @@ Click **Generate token**. Save the token temporarily in a secure location; **nev
   ]
 }
 ```
+```
+{
+  "servers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "X-MCP-Toolsets": "repos,actions",
+        "X-MCP-Readonly": "true"
+      }
+    }
+  }
+}
+```
 
 **Why these headers?** `X-MCP-Readonly` limits the server to read operations. `X-MCP-Toolsets` asks the server to expose repository and Actions capabilities instead of unrelated tools. Token permissions are a separate restriction. If a needed read tool is missing, inspect the [server's current configuration docs](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md).
 

@@ -6,7 +6,7 @@ def test_no_discount():
 
 
 def test_twenty_percent_discount():
-    assert final_price(100, 20) == 70
+    assert final_price(100, 20) == 80
 
 
 def test_full_discount():
