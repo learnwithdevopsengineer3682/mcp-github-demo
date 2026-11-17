@@ -2,6 +2,9 @@
 
 **LearnWithDevOpsEngineer** · Beginner-friendly hands-on lab
 
+- [Join the 30-Day Hands-On DevOps Engineering Cohort](https://labs.learnwithdevopsengineer.com/cohort/)
+- [Book a 1:1 session on Topmate](https://topmate.io/learnwithdevopsengineer)
+
 ## The incident
 
 | System | Status | Goal |
@@ -124,7 +127,7 @@ git push -u origin main
 
 ```text
 WITHOUT MCP
-Developer → GitHub UI → Copy logs → AI chat
+Developer → GitHub UI → Copy logs → AI chat/Documentation
 
 WITH MCP
 Developer → AI Host → MCP Client → GitHub MCP Server → GitHub API
@@ -212,29 +215,7 @@ Click **Generate token**. Save the token temporarily in a secure location; **nev
         "X-MCP-Toolsets": "repos,actions"
       }
     }
-  },
-  "inputs": [
-    {
-      "type": "promptString",
-      "id": "github_mcp_pat",
-      "description": "GitHub Personal Access Token",
-      "password": true
-    }
-  ]
-}
-```
-```
-{
-  "servers": {
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "X-MCP-Toolsets": "repos,actions",
-        "X-MCP-Readonly": "true"
-      }
-    }
-  }
+ }
 }
 ```
 
@@ -295,10 +276,6 @@ FAILED tests/test_pricing.py
 Expected: 70
 Actual:   80.0
 ```
-
-**Verify on screen:** MCP tool name → tool request → returned evidence → AI explanation
-
-If workflow logs are **not exposed** by the connected tools, inspect them manually in GitHub Actions and say so. Do not present manual log retrieval as an MCP capability.
 
 ## 7. Apply the smallest fix
 
